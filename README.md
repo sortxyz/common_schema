@@ -1,0 +1,1 @@
+# ethereum_common_schema

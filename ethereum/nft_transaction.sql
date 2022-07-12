@@ -7,3 +7,8 @@ select
     *
 from
     ethereum.nft_opensea_weth
+UNION
+select
+    *
+from
+    ethereum.nft_opensea_seaport_eth

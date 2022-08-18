@@ -28,6 +28,4 @@ where
     and l.transaction_to = '0x00000000006c3852cbef3e08e8df289169ede581'
     and l.name = 'TransferSingle'
     and l.function_contract_name <> 'ETH'
-    and l.function_address = '0x76be3b62873462d2142405439777e971754e8e77'
-order by timestamp desc
     

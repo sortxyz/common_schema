@@ -9,7 +9,9 @@ select
     l.transaction_value_eth * l.price_eth_usd as "amount_usd",
     'OpenSea' as exchange,
     '0x00000000006c3852cbef3e08e8df289169ede581' as exchange_address,
-    l.transaction_hash as "transaction_hash"
+    l.transaction_hash as "transaction_hash",
+    l.transaction_to as "to",
+    l.transaction_from as "from"
 from
     ethereum_latest.transaction_log l HINT(access_path=index_filter),
     (
@@ -28,4 +30,5 @@ where
     and l.transaction_to = '0x00000000006c3852cbef3e08e8df289169ede581'
     and l.name = 'TransferSingle'
     and l.function_contract_name <> 'ETH'
+
     
